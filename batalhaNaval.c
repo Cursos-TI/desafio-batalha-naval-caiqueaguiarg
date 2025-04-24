@@ -10,22 +10,32 @@ int main() {
     }
     printf("\n");
 
+    int Cone1 = 0, Cone1SegundaParte = 0;
+    tabuleiro[Cone1][Cone1SegundaParte + 2] = 3;
+    tabuleiro[Cone1 + 1][Cone1SegundaParte + 1] = 3;
+    tabuleiro[Cone1 + 1][Cone1SegundaParte + 3] = 3;
+    tabuleiro[Cone1 + 2][Cone1SegundaParte] = 3;
+    tabuleiro[Cone1 + 2][Cone1SegundaParte + 1] = 3;
+    tabuleiro[Cone1 + 2][Cone1SegundaParte + 2] = 3;
+    tabuleiro[Cone1 + 2][Cone1SegundaParte + 3] = 3;
+    tabuleiro[Cone1 + 2][Cone1SegundaParte + 4] = 3;
+    tabuleiro[Cone1 + 1][Cone1SegundaParte + 2] = 3;
 
-    tabuleiro[8][1] = 3;
-    tabuleiro[8][2] = 3;
-    tabuleiro[8][3] = 3;
-
-    tabuleiro[1][6] = 3;
-    tabuleiro[2][6] = 3;
-    tabuleiro[3][6] = 3;
-
-    for (int a = 0; a < 3; a++) {
-        tabuleiro[a][a] = 3;
+    int Cruz1 = 7, Cruz1SegundaParte = 1;
+    for (int i = Cruz1SegundaParte - 2; i <= Cruz1SegundaParte + 2; i++) {
+        tabuleiro[Cruz1][i] = 3;
+    }
+    for (int i = Cruz1 - 1; i <= Cruz1 + 1; i++) {
+        tabuleiro[i][Cruz1SegundaParte] = 3;
     }
 
-    for (int a = 0; a < 3; a++) {
-        tabuleiro[a][9 - a] = 3;
-    }
+    int Octaedro1 = 1, Octaedro1SegundaParte = 7;
+    tabuleiro[Octaedro1][Octaedro1SegundaParte] = 3;
+    tabuleiro[Octaedro1 - 1][Octaedro1SegundaParte] = 3;
+    tabuleiro[Octaedro1 + 1][Octaedro1SegundaParte] = 3;
+    tabuleiro[Octaedro1][Octaedro1SegundaParte - 1] = 3;
+    tabuleiro[Octaedro1][Octaedro1SegundaParte + 1] = 3;
+    tabuleiro[Octaedro1][Octaedro1SegundaParte] = 3;
 
     for (int i = 0; i < 10; i++) {
         printf("%d  ", i);
